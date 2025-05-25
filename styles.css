@@ -1,0 +1,342 @@
+html {
+  scroll-behavior: smooth;
+}
+
+body, * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+    font-weight: 100;
+}
+
+span {
+    font-weight: bold;
+}
+
+
+h1 {
+    font-size: 40px;
+    margin-bottom: 35px;
+}
+
+h2 {
+    font-size: 50px;
+}
+
+h3 {
+    font-size: 30px;
+}
+
+h4 {
+    font-size: 25px;
+    font-weight: 700;
+}
+
+p {
+    font-size: 25px;
+}
+
+section {
+    width: 85%;
+    margin: 0 auto;
+}
+
+/* Header Styles */
+
+.header-wrapper {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.header {
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    align-items: center;
+    justify-content: space-between;
+    width: 90%;
+    padding: 50px 0;
+    font-size: 1.5rem;
+    z-index: 1000;
+    background-color: #fff;
+    margin: 0 auto;
+    transition: all 0.3s ease;
+}
+
+.nav-list {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 50px;
+    list-style: none;
+    padding: 0;
+    font-weight: bold;
+}
+
+a {
+    text-decoration: none;
+    color: #000;
+
+    &:hover {
+        color: #007BFF;
+        text-decoration: underline;
+        transition: all 0.2s ease;
+    }
+}
+
+/* Home Styles */
+.home {
+    background-image: url(./EMG_PTD_HVAC_ventilation-air-conditioning_shutterstock_695984227_1920x1080.webp);
+    background-size: cover;
+    width: 100%;
+    height: 90vh;
+}
+
+.home-content {
+    position: absolute;
+    /* top: 55vh;
+    left: 50vw; */
+    
+    top: 85vh;
+    left: 35vw;
+   
+    transform: translate(-50%, -50%);
+    text-align: left;
+    color: #fff;
+    background-color: #303030;
+    padding: 50px 70px;
+    font-weight: 200;
+    line-height: 1.5;
+    width: 60%;
+}
+
+.title-paragraph {
+    font-size: 30px;
+}
+
+.about {
+    border-left: #fff solid 3px;
+    padding-left: 35px;
+}
+
+/* advantages styles */
+
+.advantages {
+    margin-top: 25vh;
+    margin-bottom: 10vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 30px;
+}
+
+.advantages-list {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: baseline;
+    gap: 50px;
+    flex-wrap: wrap;
+    padding-top: 50px;
+}
+
+.advantage-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    max-width: 300px;
+    min-width: 300px;
+    height: 25vh;
+    padding: 30px 30px;
+    background-color: #fff;
+    border-radius: 10px;
+    transition: all 0.2s ease;
+}
+
+.advantage-item-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100px;
+    height: 100px;
+}
+
+.advantage-item-title {
+    font-size: 23px;
+    font-weight: 600;
+    color: #222;
+}
+
+/* Services Styles */
+
+.services {
+    margin-top: 10vh;
+    margin-bottom: 10vh; 
+}
+
+.services-types {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: start;
+    margin-top: 50px;
+    gap: 100px;
+}
+
+.services-type {
+    width: 100%;
+}
+
+.service-type-title {
+    text-align: center;
+    font-size: 40px;
+}
+
+.service-list {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 50px;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.service-item {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    flex: 1 1 40%;
+    padding: 30px 30px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    gap: 30px;
+    max-width: 50%;
+    transition: all 0.2s ease;
+}
+
+.service-item-icon {
+    min-width: 30%;
+    max-width: 30%;
+}
+
+.service-icon {
+    width: 100%;
+    height: 100%;
+}
+
+.ventilation-item-icon {
+    min-width: 100%;
+}
+
+.service-item-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 20px;
+    width: 75%;
+}
+
+.ventilation-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    gap: 20px;
+    max-width: 30%;
+    padding: 20px 20px;
+}
+
+/* Workers Section Styles */
+
+.workers {
+    margin-top: 10vh;
+    margin-bottom: 10vh;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+
+.workers-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px;
+    width: 100%;
+    text-align: center;
+}
+
+.worker-item {
+    background: #fff;
+    border-radius: 15px;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.12);
+    padding: 35px 30px 25px 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 320px;
+    min-width: 250px;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.worker-card:hover {
+    transform: translateY(-8px) scale(1.03);
+    box-shadow: 0 8px 24px rgba(0,0,0,0.18);
+}
+
+.worker-photo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 110px;
+    height: 110px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+    color: #fff;
+    background-color: #303030;
+    font-size: 60px;
+}
+
+.worker-name {
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: #222;
+    text-align: center;
+}
+
+.worker-role {
+    font-size: 18px;
+    font-weight: 400;
+    color: #007BFF;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.worker-bio {
+    font-size: 16px;
+    color: #444;
+    text-align: center;
+    line-height: 1.5;
+}
+
+/* Footer Styles */
+
+.footer {
+    background-color: #303030;
+    color: #fff;
+    padding: 50px 0;
+    text-align: center;
+}
+
+.contact {
+    color: #fff;
+}
