@@ -34,7 +34,7 @@ h4 {
 }
 
 p {
-    font-size: 25px;
+    /* font-size: 25px; */
 }
 
 section {
@@ -128,7 +128,7 @@ a {
 /* advantages styles */
 
 .advantages {
-    margin-top: 25vh;
+    margin-top: 10vh;
     margin-bottom: 10vh;
     display: flex;
     flex-direction: column;
@@ -178,7 +178,7 @@ a {
 /* Services Styles */
 
 .services {
-    margin-top: 10vh;
+    margin-top: 20vh;
     margin-bottom: 10vh; 
 }
 
@@ -197,7 +197,7 @@ a {
 
 .service-type-title {
     text-align: center;
-    font-size: 40px;
+    font-size: 2.2rem;
 }
 
 .service-list {
@@ -255,6 +255,77 @@ a {
     padding: 20px 20px;
 }
 
+.service-title {
+    font-size: 24px;
+    font-weight: 600;
+    color: #303030;
+    margin-bottom: 10px;
+}
+
+.service-description {
+    font-size: 18px;
+    color: #444;
+    line-height: 1.5;
+}
+
+/* about Section Styles */
+
+.about-company {
+    margin-top: 10vh;
+    margin-bottom: 10vh;
+    background: #f7f7f7;
+    border-radius: 15px;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.07);
+    padding: 60px 50px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 60px;
+}
+
+.about-company-image {
+    flex: 0 0 300px;
+    max-width: 300px;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+.about-company-content {
+    flex: 1 1 0;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.about-company-title {
+    font-size: 36px;
+    font-weight: 700;
+    color: #222;
+    margin-bottom: 10px;
+}
+
+.about-company-description {
+    font-size: 20px;
+    color: #444;
+    line-height: 1.7;
+}
+
+@media (max-width: 900px) {
+    .about-company {
+        flex-direction: column;
+        padding: 40px 20px;
+        gap: 30px;
+    }
+    .about-company-image {
+        max-width: 100%;
+        width: 100%;
+    }
+    .about-company-content {
+        width: 100%;
+    }
+}
+
 /* Workers Section Styles */
 
 .workers {
@@ -277,19 +348,12 @@ a {
 .worker-item {
     background: #fff;
     border-radius: 15px;
-    box-shadow: 0 4px 16px rgba(0,0,0,0.12);
     padding: 35px 30px 25px 30px;
     display: flex;
     flex-direction: column;
     align-items: center;
     max-width: 320px;
     min-width: 250px;
-    transition: transform 0.2s, box-shadow 0.2s;
-}
-
-.worker-card:hover {
-    transform: translateY(-8px) scale(1.03);
-    box-shadow: 0 8px 24px rgba(0,0,0,0.18);
 }
 
 .worker-photo {
@@ -316,9 +380,8 @@ a {
 .worker-role {
     font-size: 18px;
     font-weight: 400;
-    color: #007BFF;
     margin-bottom: 15px;
-    text-align: center;
+    color: #666;
 }
 
 .worker-bio {
@@ -334,9 +397,258 @@ a {
     background-color: #303030;
     color: #fff;
     padding: 50px 0;
-    text-align: center;
 }
 
-.contact {
+.footer-main {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: start;
+    width: 85%;
+    margin: 0 auto;
+}
+
+.footer-description {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 30%;
+}
+
+.footer-links {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.footer-links-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 30%;
+    list-style: none;
+}
+
+.footer-links-list a {
     color: #fff;
+    font-size: 18px;
+}
+
+.footer-links-list a:hover {
+    color: #007BFF;
+    text-decoration: underline;
+}
+
+.footer-link {
+    font-size: 20px;
+    font-weight: bold;
+    color: #fff;
+}
+
+/* Adaptive Styles */
+
+/* Burger Menu Styles */
+.burger-menu {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    z-index: 1100;
+}
+
+.burger-bar {
+    width: 28px;
+    height: 4px;
+    background-color: #222;
+    margin: 4px 0;
+    border-radius: 2px;
+    transition: 0.3s;
+}
+
+/* Show burger and hide nav-list on mobile */
+@media (max-width: 900px) {
+    .burger-menu {
+        display: flex;
+    }
+
+    .nav-list {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 20vh;
+        right: 0;
+        background-color: #fff;
+        width: 30%;
+        padding: 20px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        border-radius: 5%;
+    }
+
+    .menu-open {
+        display: flex;
+    }
+}
+
+@media (max-width: 1200px) {
+    .header, .footer-main, section {
+        width: 95%;
+    }
+    .home-content {
+        width: 75%;
+        padding: 40px 30px;
+        left: 45vw;
+    }
+    .advantages-list {
+        gap: 30px;
+    }
+    .service-item {
+        max-width: 70%;
+    }
+}
+
+@media (max-width: 900px) {
+    .header {
+        padding: 30px 0;
+        font-size: 1.2rem;
+        gap: 20px;
+    }
+    .nav-list {
+        gap: 25px;
+    }
+    .home-content {
+        width: 90%;
+        padding: 30px 15px;
+        left: 50vw;
+        top: 70vh;
+    }
+    .advantages-list {
+        flex-direction: column;
+        align-items: center;
+        gap: 25px;
+    }
+    .advantage-item {
+        min-width: 220px;
+        max-width: 90vw;
+        height: auto;
+        padding: 20px 15px;
+    }
+    .services-types {
+        gap: 50px;
+    }
+    .service-list {
+        flex-direction: column;
+        gap: 20px;
+    }
+    .service-item {
+        flex-direction: column;
+        max-width: 100%;
+        width: 100%;
+        gap: 15px;
+        padding: 20px 10px;
+    }
+    .service-item-icon {
+        min-width: 60px;
+        max-width: 80px;
+    }
+    .service-item-info {
+        width: 100%;
+    }
+    .ventilation-item {
+        max-width: 100%;
+    }
+    .footer-main {
+        flex-direction: column;
+        gap: 30px;
+        width: 95%;
+    }
+    .footer-description, .footer-links-list {
+        width: 100%;
+    }
+}
+
+@media (max-width: 600px) {
+    h1 { font-size: 28px; }
+    h2 { font-size: 32px; }
+    h3 { font-size: 22px; }
+    h4 { font-size: 18px; }
+    .header {
+        font-size: 1rem;
+        padding: 15px 10px;
+    }
+    .nav-list {
+        gap: 10px;
+        font-size: 16px;
+    }
+    .home {
+        height: 60vh;
+    }
+    .home-content {
+        width: 98%;
+        padding: 10px 5px;
+        font-size: 16px;
+        top: 50vh;
+    }
+    .title-paragraph {
+        font-size: 18px;
+    }
+    .about {
+        padding-left: 10px;
+    }
+    .advantages {
+        margin-top: 5vh;
+        margin-bottom: 5vh;
+    }
+    .advantage-item {
+        min-width: 90vw;
+        padding: 10px 5px;
+    }
+    .about-company {
+        padding: 20px 5px;
+        gap: 15px;
+    }
+    .about-company-title {
+        font-size: 22px;
+    }
+    .about-company-description {
+        font-size: 14px;
+    }
+    .workers {
+        gap: 20px;
+    }
+    .worker-item {
+        padding: 15px 5px 10px 5px;
+        min-width: 90vw;
+        max-width: 100vw;
+    }
+    .worker-photo {
+        width: 70px;
+        height: 70px;
+        font-size: 32px;
+    }
+    .worker-name {
+        font-size: 16px;
+    }
+    .worker-role {
+        font-size: 12px;
+    }
+    .worker-bio {
+        font-size: 12px;
+    }
+    .footer {
+        padding: 20px 0;
+    }
+    .footer-main {
+        width: 100%;
+        gap: 10px;
+    }
+    .footer-description, .footer-links-list {
+        font-size: 14px;
+        gap: 10px;
+    }
+    .footer-link {
+        font-size: 16px;
+    }
 }
