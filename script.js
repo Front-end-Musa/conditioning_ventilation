@@ -7,3 +7,7 @@ document.addEventListener('DOMContentLoaded', function () {
         navList.classList.toggle('menu-open');
     });
 });
+
+const nameElement = document.getElementById('name');
+const name = "Название компании";
+nameElement.textContent = name;
