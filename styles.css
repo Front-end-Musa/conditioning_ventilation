@@ -484,7 +484,7 @@ a {
     gap: 5px;
 }
 
-.burger-menu.menu-open {
+.burger-menu.burger-open {
     gap: 10px;
 }
 
@@ -517,18 +517,22 @@ a {
     .nav-list {
         display: none;
         flex-direction: column;
-        position: absolute;
-        top: 10vh;
+        position: fixed;
+        top: 15vh;
         background-color: #fff;
-        right: 0;
-        width: 30%;
-        padding: 20px;
+        width: 0;
+        padding: 0;
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        border-radius: 5%;
         z-index: 1000;
     }
 
     .menu-open {
+        display: flex;
+        width: 35%;
+        padding: 20px 0;
+    }
+    
+    .burger-open {
         display: flex;
     }
 }

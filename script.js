@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // Example: Toggle a class on the body to open/close a menu
     burgerMenu.addEventListener('click', function () {
-        burgerMenu.classList.toggle('menu-open');
+        burgerMenu.classList.toggle('burger-open');
         navList.classList.toggle('menu-open');
         burgerBar.forEach(bar => {
             bar.classList.toggle('active');
