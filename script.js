@@ -14,5 +14,5 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 const nameElement = document.getElementById('name');
-const name = "Название компании";
+const name = "VAYRO";
 nameElement.textContent = name;
