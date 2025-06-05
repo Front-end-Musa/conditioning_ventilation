@@ -72,6 +72,14 @@ section {
     transition: all 0.3s ease;
 }
 
+.menu-wrapper {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+}
+
 .nav-list {
     display: flex;
     flex-direction: row;
