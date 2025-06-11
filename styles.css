@@ -518,11 +518,8 @@ a {
         display: none;
         flex-direction: column;
         position: fixed;
-        top: 15vh;
+        top: 10vh;
         background-color: #fff;
-        width: 0;
-        padding: 0;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         z-index: 1000;
     }
 
@@ -564,7 +561,7 @@ a {
         gap: 20px;
     }
     .nav-list {
-        gap: 25px;
+        gap: 30px;
     }
     .home-content {
         width: 90%;
