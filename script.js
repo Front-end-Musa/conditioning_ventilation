@@ -13,6 +13,8 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 });
 
-const nameElement = document.getElementById('name');
+const nameElements = document.querySelectorAll('#name');
 const name = "VAYRO";
-nameElement.textContent = name;
+nameElements.forEach(nameEl => {
+    nameEl.textContent = name;
+})
