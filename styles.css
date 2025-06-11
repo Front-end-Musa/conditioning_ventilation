@@ -517,8 +517,8 @@ a {
     .nav-list {
         display: none;
         flex-direction: column;
-        position: fixed;
-        top: 10vh;
+        position: absolute;
+        right: 0;
         background-color: #fff;
         z-index: 1000;
     }
@@ -622,10 +622,6 @@ a {
     .header {
         font-size: 1rem;
         padding: 15px 10px;
-    }
-    .nav-list {
-        gap: 10px;
-        font-size: 16px;
     }
     .home {
         height: 60vh;
