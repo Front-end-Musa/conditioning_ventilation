@@ -8,16 +8,20 @@ body, * {
     box-sizing: border-box;
     font-family: 'Arial', sans-serif;
     font-weight: 100;
+    color: white;
+}
+
+body {
+    color: white;
+    background-color: #1F1F1F;
 }
 
 span {
     font-weight: bold;
 }
 
-
 h1 {
     font-size: 40px;
-    margin-bottom: 35px;
 }
 
 h2 {
@@ -39,10 +43,14 @@ h5 {
     font-weight: 600;
 }
 
-section {
+.wrapper {
     width: 85%;
     margin: 0 auto;
+}
+
+section {
     scroll-margin-top: 100px;
+    background-color: #1F1F1F;
 }
 
 /* Header Styles */
@@ -53,7 +61,7 @@ section {
     left: 0;
     right: 0;
     z-index: 1000;
-    background-color: #fff;
+    background-color: #1F1F1F;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
@@ -67,7 +75,7 @@ section {
     padding: 50px 0;
     font-size: 1.5rem;
     z-index: 1000;
-    background-color: #fff;
+    background-color: #1F1F1F;
     margin: 0 auto;
     transition: all 0.3s ease;
 }
@@ -92,7 +100,7 @@ section {
 
 a {
     text-decoration: none;
-    color: #000;
+    color: white;
 
     &:hover {
         color: #007BFF;
@@ -106,26 +114,54 @@ a {
     background-image: url(./EMG_PTD_HVAC_ventilation-air-conditioning_shutterstock_695984227_1920x1080.webp);
     background-size: cover;
     width: 100%;
-    height: 90vh;
-    margin-bottom: 15vh;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-color: #1F1F1F; /* Фоновый цвет на случай, если изображение не загрузится */
+}
+
+.home::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5); /* Полупрозрачный черный фон */
 }
 
 .home-content {
-    position: absolute;
-    /* top: 55vh;
-    left: 50vw; */
-    
-    top: 85vh;
-    left: 35vw;
-   
-    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
     text-align: left;
     color: #fff;
-    background-color: #303030;
-    padding: 50px 70px;
     font-weight: 200;
     line-height: 1.5;
-    width: 60%;
+    filter: brightness(1);
+}
+
+.whatsapp {
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+    font-size: 30px;
+    border-radius: 10px;
+    padding: 10px 20px;
+    color: #fff;
+    background-color: #25D366;
+    border: none;
+    cursor: pointer;
+}
+
+.whatsapp:hover {
+    background-color: #128C7E;
+    transition: all 0.2s ease;
 }
 
 .title-paragraph {
@@ -135,12 +171,13 @@ a {
 .home-about {
     border-left: #fff solid 3px;
     padding-left: 35px;
+    max-width: 50%;
 }
 
 /* Services Styles */
 
 .services {
-    padding-top: 10vh;
+    padding-top: 20vh;
 }
 
 .services-types {
@@ -172,31 +209,22 @@ a {
 
 .service-item {
     display: flex;
-    flex-direction: row;
-    align-items: center;
+    flex-direction: column;
     justify-content: space-between;
-    flex: 1 1 40%;
-    padding: 30px 30px;
+    padding: 20px 20px;
     background-color: #fff;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    gap: 30px;
+    background-color: #303030;
+    gap: 20px;
     max-width: 50%;
-    transition: all 0.2s ease;
-}
-
-.service-item-icon {
-    min-width: 30%;
     max-width: 30%;
+    transition: all 0.2s ease;
 }
 
 .service-icon {
     width: 100%;
     height: 100%;
-}
-
-.ventilation-item-icon {
-    min-width: 100%;
 }
 
 .service-item-info {
@@ -207,25 +235,14 @@ a {
     width: 75%;
 }
 
-.ventilation-item {
-    display: flex;
-    flex-direction: column;
-    justify-content: start;
-    gap: 20px;
-    max-width: 30%;
-    padding: 20px 20px;
-}
-
 .service-title {
     font-size: 24px;
     font-weight: 600;
-    color: #303030;
     padding-bottom: 10px;
 }
 
 .service-description {
     font-size: 18px;
-    color: #444;
     line-height: 1.5;
 }
 
@@ -260,30 +277,30 @@ a {
     min-width: 300px;
     height: 25vh;
     padding: 30px 30px;
-    background-color: #fff;
+    background-color: #303030;
+    color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     border-radius: 10px;
     transition: all 0.2s ease;
 }
 
 .advantage-item-icon {
-    display: flex;
-    justify-content: center;
-    align-items: center;
     width: 100px;
     height: 100px;
+    border-radius: 100px;
+    background-color: #fff;
 }
 
 .advantage-item-title {
     font-size: 23px;
     font-weight: 600;
-    color: #222;
 }
 
 
 /* About Section Styles */
 
 .about-section {
-    padding-top: 10vh;
+    padding: 15vh 0;
 }
 
 .about-container {
@@ -312,72 +329,6 @@ a {
 .about-container:hover {
   background-color: #ffffff;
   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
-}
-
-
-/* Workers Section Styles */
-
-.workers {
-    padding-top: 10vh;
-    padding-bottom: 10vh;
-    display: flex;
-    flex-direction: column;
-    gap: 50px;
-}
-
-.workers-list {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 40px;
-    width: 100%;
-    text-align: center;
-}
-
-.worker-item {
-    background: #fff;
-    border-radius: 15px;
-    padding: 35px 30px 25px 30px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    max-width: 320px;
-    min-width: 250px;
-}
-
-.worker-photo {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 110px;
-    height: 110px;
-    border-radius: 50%;
-    margin-bottom: 20px;
-    color: #fff;
-    background-color: #303030;
-    font-size: 60px;
-}
-
-.worker-name {
-    font-size: 24px;
-    font-weight: 600;
-    margin-bottom: 8px;
-    color: #222;
-    text-align: center;
-}
-
-.worker-role {
-    font-size: 18px;
-    font-weight: 400;
-    margin-bottom: 15px;
-    color: #666;
-}
-
-.worker-bio {
-    font-size: 16px;
-    color: #444;
-    text-align: center;
-    line-height: 1.5;
 }
 
 /* Footer Styles */
@@ -465,7 +416,6 @@ a {
 .footer-bottom {
   background-color: #303030;
   text-align: center;
-  color: white;
   padding: 15px;
   font-size: 14px;
 }
