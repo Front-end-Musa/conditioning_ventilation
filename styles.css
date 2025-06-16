@@ -146,9 +146,6 @@ a {
 }
 
 .whatsapp {
-    display: flex;
-    flex-direction: row;
-    gap: 15px;
     font-size: 30px;
     border-radius: 10px;
     padding: 10px 20px;
@@ -170,7 +167,7 @@ a {
 .home-about {
     border-left: #fff solid 3px;
     padding-left: 35px;
-    max-width: 50%;
+    width: 60%;
 }
 
 /* Services Styles */
@@ -186,10 +183,6 @@ a {
     align-items: start;
     padding-top: 50px;
     gap: 100px;
-}
-
-.services-type {
-    width: 100%;
 }
 
 .service-type-title {
@@ -209,7 +202,6 @@ a {
 .service-item {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
     padding: 20px 20px;
     background-color: #fff;
     border-radius: 10px;
@@ -229,15 +221,14 @@ a {
 .service-item-info {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
     gap: 20px;
-    width: 75%;
 }
 
 .service-title {
-    font-size: 24px;
+    font-size: 20px;
     font-weight: 600;
     padding-bottom: 10px;
+    text-align: center;
 }
 
 .service-description {
@@ -297,31 +288,21 @@ a {
 }
 
 .about-container {
-  max-width: 900px;
+  width: 70%;
   margin: 0 auto;
   text-align: left;
   background-color: #f9fafb; /* Светло-серый фон для мягкости */
-  padding: 80px 60px;
+  padding: 50px 60px;
   scroll-margin-top: 80px;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Легкая тень */
   border-radius: 12px; /* Скругленные углы */
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   color: #222;
-  transition: background-color 0.3s ease;
 }
 
 .about-section p {
   font-size: 18px;
   line-height: 1.75;
   color: #444;
-  margin-bottom: 20px;
-  max-width: 800px;
-}
-
-/* Hover эффект для всей секции — чуть светлее фон */
-.about-container:hover {
-  background-color: #ffffff;
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
 }
 
 /* Footer Styles */
@@ -473,14 +454,14 @@ a {
         z-index: 1000;
     }
 
+    .home-about {
+        width: 100%;
+    }
+
     .menu-open {
         display: flex;
         width: 35%;
         padding: 20px 0;
-    }
-    
-    .burger-open {
-        display: flex;
     }
 }
 
@@ -488,13 +469,19 @@ a {
     .header, .footer-main, section {
         width: 95%;
     }
+    .header {
+        padding: 40px 0;
+        font-size: 1.3rem;
+        gap: 30px;
+    }
     .advantages-list {
         gap: 30px;
     }
     .service-item {
-        max-width: 70%;
+        max-width: 45%;
     }
     .about-container {
+        width: 90%;
         padding: 40px 30px;
     }
 }
@@ -524,7 +511,6 @@ a {
         gap: 50px;
     }
     .service-list {
-        flex-direction: column;
         gap: 20px;
     }
     .service-item {
@@ -534,15 +520,6 @@ a {
         margin: 0 auto;
         gap: 20px;
         padding: 30px 20px;
-    }
-    .service-title {
-        text-align: center;
-    }
-    .service-item-info {
-        width: 100%;
-    }
-    .ventilation-item {
-        max-width: 100%;
     }
     .footer-main {
         flex-direction: column;
@@ -571,6 +548,10 @@ a {
     .home-about {
         padding-left: 10px;
         max-width: 100%;
+    }
+    .whatsapp {
+        font-size: 24px;
+        padding: 8px 16px;
     }
     .advantages-section {
         margin-top: 5vh;
@@ -646,11 +627,5 @@ a {
     display: flex;
     flex-direction: column;
     text-align: center;
-  }
-}
-
-@media (max-width: 768px) {
-  .about-section {
-    padding: 60px 20px;
   }
 }
