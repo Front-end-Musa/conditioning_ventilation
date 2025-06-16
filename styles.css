@@ -56,7 +56,7 @@ section {
 /* Header Styles */
 
 .header-wrapper {
-    position: fixed;
+    position: sticky;
     top: 0;
     left: 0;
     right: 0;
@@ -114,7 +114,7 @@ a {
     background-image: url(./assets/EMG_PTD_HVAC_ventilation-air-conditioning_shutterstock_695984227_1920x1080.webp);
     background-size: cover;
     width: 100%;
-    height: 100vh;
+    height: 85vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -131,7 +131,7 @@ a {
     top: 0;
     left: 0;
     width: 100%;
-    height: 100vh;
+    height: 100%;
     background-color: rgba(0, 0, 0, 0.5); /* Полупрозрачный черный фон */
 }
 
@@ -142,7 +142,6 @@ a {
     text-align: left;
     color: #fff;
     font-weight: 200;
-    line-height: 1.5;
     filter: brightness(1);
 }
 
@@ -263,18 +262,12 @@ a {
     align-items: baseline;
     gap: 50px;
     flex-wrap: wrap;
-    padding-top: 50px;
 }
 
 .advantage-item {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
     text-align: center;
     gap: 20px;
-    max-width: 300px;
-    min-width: 300px;
+    width: 250px;
     height: 25vh;
     padding: 30px 30px;
     background-color: #303030;
@@ -448,7 +441,7 @@ a {
 .burger-bar {
     width: 28px;
     height: 4px;
-    background-color: #222;
+    background-color: white;
     border-radius: 2px;
     transition: 0.3s;
 }
@@ -476,7 +469,7 @@ a {
         flex-direction: column;
         position: absolute;
         right: 0;
-        background-color: #fff;
+        background-color: #1F1F1F;
         z-index: 1000;
     }
 
@@ -494,11 +487,6 @@ a {
 @media (max-width: 1200px) {
     .header, .footer-main, section {
         width: 95%;
-    }
-    .home-content {
-        width: 75%;
-        padding: 40px 30px;
-        left: 45vw;
     }
     .advantages-list {
         gap: 30px;
@@ -522,20 +510,15 @@ a {
     }
     .home-content {
         width: 90%;
-        padding: 30px 15px;
-        left: 50vw;
-        top: 70vh;
     }
     .advantages-list {
-        flex-direction: column;
-        align-items: center;
         gap: 25px;
     }
     .advantage-item {
-        min-width: 220px;
-        max-width: 90vw;
+        max-width: 220px;
         height: auto;
         padding: 20px 15px;
+        font-size: 16px;
     }
     .services-types {
         gap: 50px;
@@ -572,36 +555,26 @@ a {
 }
 
 @media (max-width: 600px) {
-    h1 { font-size: 28px; }
     h2 { font-size: 32px; }
-    h3 { font-size: 22px; }
+    h3 { font-size: 20px; }
     h4 { font-size: 18px; }
     .header {
         font-size: 1rem;
         padding: 15px 10px;
     }
-    .home {
-        height: 60vh;
-    }
     .home-content {
         width: 98%;
-        padding: 10px 5px;
-        font-size: 16px;
-        top: 50vh;
     }
     .title-paragraph {
         font-size: 18px;
     }
     .home-about {
         padding-left: 10px;
+        max-width: 100%;
     }
     .advantages-section {
         margin-top: 5vh;
         margin-bottom: 5vh;
-    }
-    .advantage-item {
-        min-width: 90vw;
-        padding: 10px 5px;
     }
     .workers {
         gap: 20px;
