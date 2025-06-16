@@ -43,14 +43,11 @@ h5 {
     font-weight: 600;
 }
 
-.wrapper {
-    width: 85%;
-    margin: 0 auto;
-}
-
 section {
     scroll-margin-top: 100px;
     background-color: #1F1F1F;
+    width: 85%;
+    margin: 0 auto;
 }
 
 /* Header Styles */
@@ -111,15 +108,15 @@ a {
 
 /* Home Styles */
 .home {
-    background-image: url(./assets/EMG_PTD_HVAC_ventilation-air-conditioning_shutterstock_695984227_1920x1080.webp);
-    background-size: cover;
+    background-image: url(./assets/AC-compressor-goes-off.png.webp);
     width: 100%;
     height: 85vh;
     display: flex;
     justify-content: center;
     align-items: center;
     position: relative;
-    background-position: center;
+    background-position: top;
+    background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-color: #1F1F1F; /* Фоновый цвет на случай, если изображение не загрузится */
@@ -136,10 +133,11 @@ a {
 }
 
 .home-content {
+    width: 85%;
+    margin: 0 auto;
     display: flex;
     flex-direction: column;
     gap: 50px;
-    text-align: left;
     color: #fff;
     font-weight: 200;
     filter: brightness(1);
@@ -208,9 +206,7 @@ a {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     background-color: #303030;
     gap: 20px;
-    max-width: 50%;
     max-width: 30%;
-    transition: all 0.2s ease;
 }
 
 .service-icon {
@@ -467,7 +463,7 @@ a {
 
 @media (max-width: 1200px) {
     .header, .footer-main, section {
-        width: 95%;
+        width: 90%;
     }
     .header {
         padding: 40px 0;
@@ -514,9 +510,7 @@ a {
         gap: 20px;
     }
     .service-item {
-        flex-direction: column;
-        max-width: 100%;
-        width: 85%;
+        max-width: 45%;
         margin: 0 auto;
         gap: 20px;
         padding: 30px 20px;
